@@ -8,7 +8,9 @@
     5 - APLIQUE EL GET PARA QUE ME RETORNE EL ARRAY
     6 - CREE LOS PRODUCTOS
     7 - CREE EL PRODUCTMANAGER Y LE AGREGUE LOS PRODUCTOS AL ARRAY VACIO
-    SE MUESTRA PERFECTO EN LA CONSOLA, OBSERVACION PARA EL TUTOR, AGREGÁ UN PRODUCTO NUEVO PARA VERIFICAR COMO EL CODIGO DEL MISMO SE CREA **/
+    SE MUESTRA PERFECTO EN LA CONSOLA, OBSERVACION PARA EL TUTOR, AGREGÁ UN PRODUCTO NUEVO PARA VERIFICAR COMO EL CODIGO DEL MISMO SE CREA,
+    TAMBIEN PUEDE VERIFICAR EL MENSAJE POR CONSOLA SI A ALGUN PRODUCTO LE FALTA UN CAMPO, EJEMPLO: DEJAR UNA SOLA LETRA EN EL TITTLE DE 
+    CUALQUIER PRODUCTO Y MOSTRARA EL ERROR **/
 
 
 
@@ -38,8 +40,8 @@ class ProductManager {
     }
 
     agregarProducto(nuevoProducto) {
-        if (nuevoProducto.title.length > 0 && nuevoProducto.description.length > 0 && toString(nuevoProducto.price) && nuevoProducto.image.length > 0 && toString(nuevoProducto.stock)) {
-            console.log("Los datos son correctos")
+        if (nuevoProducto.title.length > 1 && nuevoProducto.description.length > 1 && toString(nuevoProducto.price).length > 0 && nuevoProducto.image.length > 0 && toString(nuevoProducto.stock).length > 0) {
+            // console.log("Los datos son correctos")
 
             if (this.products.filter(product => product.code === nuevoProducto.code).length > 0) {
                 console.log("El producto ya existe")
